@@ -1,0 +1,191 @@
+:root{
+
+	/* COLORS */
+
+	--brightOrange: hsl(31, 77%, 52%);
+	--darkCyan: hsl(184, 100%, 22%);
+	--veryDarkCyan: hsl(179, 100%, 13%);
+
+	--transparentWhite: hsla(0, 0%, 100%, 0.75);
+	--veryLightGray: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+	/* FONTS */
+
+	--heading: 'Big Shoulders Display', cursive;
+	--paragraph: 'Lexend Deca', sans-serif;
+
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%;
+	background-color: var(--veryLightGray);
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	font-family: var(--heading);
+	color: var(--veryLightGray);
+	font-size: 4rem;
+	padding: 0 5rem;
+	text-transform: uppercase;
+}
+
+p{
+	font-family: var(--paragraph);
+	font-size: 1.4rem;
+	color: var(--transparentWhite);
+	padding: 0 5rem 7rem;
+	line-height: 1.8;
+
+}
+
+section{
+	height: 100%;
+	width: 100%;
+	padding-top: 10rem;
+}
+
+.cards{
+	display: flex;
+	max-width: 65%;
+	margin: 0 auto;
+}
+
+.icon{
+	padding: 5rem 5rem 0;
+}
+
+.sedans{
+	background-color: var(--brightOrange);
+	min-width: 30rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+}
+
+.suvs{
+	background-color: var(--darkCyan);
+	min-width: 30rem;
+}
+
+.luxury{
+	background-color: var(--veryDarkCyan);
+	min-width: 30rem;
+	border-top-right-radius: 1rem;
+	border-bottom-right-radius: 1rem;
+}
+
+.btn{
+	font-size: 1.5rem;
+	font-family: var(--paragraph);
+	background-color: var(--veryLightGray);
+	display: inline-block;
+	border-radius: 5rem;
+	margin-left: 5rem;
+	margin-bottom: 5rem;
+	cursor: pointer;
+	border: .2rem solid var(--veryLightGray);
+}
+
+.btn:hover{
+	background-color: transparent;
+	color: var(--veryLightGray);
+}
+
+.btn-sedans-text{
+	color: var(--brightOrange);
+	padding: 0 3.2rem;
+}
+
+.btn-suv-text{
+	color: var(--darkCyan);
+	padding: 0 3.2rem;
+}
+
+.btn-luxury-text{
+	color: var(--veryDarkCyan);
+	padding: 0 3.2rem;
+}
+
+.btn-sedans-text:hover, .btn-suv-text:hover, .btn-luxury-text:hover{
+	color: var(--veryLightGray);
+	margin: 0;
+	padding: 1.4rem 3.2rem;
+}
+
+/* RESPONSIVE DESIGN */
+
+
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width: 1199px) and (min-width: 992px){
+
+
+
+.cards{
+	position: absolute;
+	left: 6rem;
+}
+
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width: 991px) and (min-width: 768px){
+
+
+.cards{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10rem;
+}
+
+.sedans{
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 0;
+}
+
+.luxury{
+	border-bottom-left-radius: 1rem;
+	border-top-right-radius: 0;
+}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width: 767px){
+
+
+
+.cards{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	left: 1rem;
+}
+
+.sedans{
+	border-top-right-radius: 1rem;
+	border-bottom-left-radius: 0;
+}
+
+.luxury{
+	border-bottom-left-radius: 1rem;
+	border-top-right-radius: 0;
+}
+	
+}
